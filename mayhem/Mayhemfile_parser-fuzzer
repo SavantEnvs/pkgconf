@@ -1,0 +1,9 @@
+project: savantenvs/pkgconf
+target: parser-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parser-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/parser-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/parser-fuzzer.dict

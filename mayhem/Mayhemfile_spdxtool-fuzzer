@@ -1,0 +1,9 @@
+project: savantenvs/pkgconf
+target: spdxtool-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/spdxtool-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/spdxtool-fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/spdxtool-fuzzer.dict
